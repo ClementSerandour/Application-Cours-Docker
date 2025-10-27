@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="my-5 text-center">
+    <h1 class="mt-4" style="color:#880e4f; font-weight:600;">Octobre Rose en France</h1>
+    <p class="mt-2" style="color:#ad4c68; font-size:1.1rem;">Mois de sensibilisation au dépistage du cancer du sein</p>
+    <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Bannière Octobre Rose" class="img-fluid rounded shadow" style="max-width:800px;">
+</div>
+
+<div class="actualité-box">
+    <p class="intro">
+        Chaque année, le mois d’octobre se pare de rose pour rappeler l’importance du dépistage précoce du cancer du sein. 
+        En France, <strong>Octobre Rose</strong> mobilise associations, collectivités et citoyens pour soutenir la recherche 
+        et informer sur l’importance du dépistage.
+    </p>
+
+    <h2>Les actions menées en 2025</h2>
+    <p>
+        Partout en France, des initiatives locales et nationales fleurissent pour encourager la prévention et la solidarité :
+    </p>
+    <ul>
+        <li><strong>Courses solidaires</strong> : “La Parisienne”, “La Strasbourgeoise”, “Odysséa”… autant d’événements pour la bonne cause.</li>
+        <li><strong>Édifices illuminés</strong> : Tour Eiffel, mairies et hôpitaux se parent de rose pour montrer leur engagement.</li>
+        <li><strong>Campagnes de communication</strong> : affiches, stands, et conférences d’information sur la santé des femmes.</li>
+        <li><strong>Collectes de dons</strong> au profit de la recherche et des associations d’accompagnement.</li>
+    </ul>
+
+    <div class="image-section text-center my-4">
+        <img src="{{ url_for('static', filename='img1.png') }}" alt="Événement Octobre Rose" class="img-fluid rounded shadow" style="max-width:600px;">
+    </div>
+
+    <h2>Pourquoi Octobre Rose est essentiel</h2>
+    <p>
+        Le dépistage précoce reste la meilleure arme contre le cancer du sein. 
+        En France, chaque femme âgée de 50 à 74 ans est invitée à réaliser une mammographie tous les deux ans, prise en charge à 100%.
+        Grâce à ces campagnes, le taux de survie s’est considérablement amélioré au cours des dernières décennies.
+    </p>
+
+    <h2>Comment s'informer et agir</h2>
+    <p>
+        Pour en savoir plus sur la prévention, les aides et la recherche, plusieurs ressources officielles sont disponibles :
+    </p>
+    <ul>
+        <li><a href="https://www.cancerdusein.org/" target="_blank">Association Ruban Rose</a> — organisatrice historique du mouvement en France.</li>
+        <li><a href="https://sante.gouv.fr/" target="_blank">Ministère de la Santé</a> — recommandations officielles et statistiques nationales.</li>
+        <li><a href="https://ligue-cancer.net/" target="_blank">La Ligue contre le Cancer</a> — informations, dons et accompagnement des patients.</li>
+        <li><a href="https://depistage-cancer.fr/" target="_blank">Programme national de dépistage organisé</a> — calendrier et conseils pratiques.</li>
+    </ul>
+
+    <div class="text-center mt-5">
+        <a href="https://www.cancerdusein.org/" target="_blank" class="btn btn-custom">
+            <i class="fas fa-ribbon"></i> Soutenir le mouvement
+        </a>
+    </div>
+</div>
+
+<style>
+    .actualité-box {
+        background: linear-gradient(145deg, #ffffff 0%, #f9c5d1 100%);
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 900px;
+        margin: 0 auto 60px auto;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-align: justify;
+        color: #5a2a3d;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .actualité-box h2 {
+        color: #880e4f;
+        margin-top: 30px;
+        font-weight: 600;
+    }
+
+    .actualité-box ul {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        list-style-type: disc;
+        padding-left: 25px;
+    }
+
+    .actualité-box li {
+        margin-bottom: 8px;
+    }
+
+    .actualité-box a {
+        color: #d81b60;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .actualité-box a:hover {
+        text-decoration: underline;
+    }
+
+    .intro {
+        font-size: 1.1rem;
+        color: #7b3f55;
+        margin-bottom: 20px;
+    }
+
+    .image-section img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-section img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(236, 64, 122, 0.4);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+{% endblock %}

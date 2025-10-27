@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-box mt-4" style="background: linear-gradient(145deg, #ffffff 0%, #f8bbd9 100%); border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+    <h2 style="color:#880e4f;">Variables Environnements du Frontend :</h2>
+    {% if data %}
+        <ul class="list-unstyled mt-3" style="color:#5a2a3d; font-size:1.1rem;">
+            {% for key, value in data.items() %}
+                <li><strong>{{ key }} :</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="lead" style="color:#5a2a3d;">Aucun argument reçu pour le moment.</p>
+    {% endif %}
+</div>
+    <style>
+        .content-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+    </style>
+{% endblock %}

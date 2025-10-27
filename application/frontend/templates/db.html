@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="content-box mt-4" style="background: linear-gradient(145deg, #ffffff 0%, #f8bbd9 100%); border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+        <h2 class="text-center mb-4" style="color:#880e4f; font-weight:600;">Connexions enregistrées</h2>
+
+        <div class="table-container">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle text-center shadow-sm rose-table" style="background: linear-gradient(145deg, #ffffff 0%, #f8bbd9 100%); border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); overflow:hidden;">
+                    <thead style="background: linear-gradient(45deg, #f8bbd9, #fce4ec); color:#880e4f; font-weight:600; position: sticky; top: 0; z-index: 2;">
+                        <tr>
+                            <th>ID</th>
+                            <th>Machine</th>
+                            <th>Heure</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in data %}
+                        <tr>
+                            <td>{{ row.id }}</td>
+                            <td>{{ row.machine }}</td>
+                            <td>{{ row.heure }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .content-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .table-container {
+            max-height: 400px;
+            overflow-y: auto;
+            border-radius: 10px;
+        }
+
+        /* Fond plus rosé */
+        .rose-table tbody tr {
+            background-color: #f9cadd;
+            transition: all 0.2s ease;
+        }
+
+        .rose-table tbody tr:nth-child(even) {
+            background-color: #f8b2cf;
+        }
+
+        .rose-table tbody tr:hover {
+            background-color: #f48fb1 !important;
+            color: #880e4f;
+            transform: scale(1.01);
+        }
+
+        /* Scrollbar rose et douce */
+        .table-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background-color: #f48fb1;
+            border-radius: 10px;
+        }
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background-color: #ec407a;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erreur 404 - TP Docker Octobre Rose</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-box {
+            background: linear-gradient(145deg, #ffffff 0%, #f8bbd9 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .error-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .error-title {
+            color: #880e4f;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .error-text {
+            font-size: 1.3rem;
+            color: #b56576;
+            margin-bottom: 10px;
+        }
+        .error-subtext {
+            color: #ad4c68;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+        .btn-custom {
+            background: linear-gradient(45deg, #ec407a, #f06292);
+            border: none;
+            color: white;
+            border-radius: 30px;
+            padding: 12px 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(236, 64, 122, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(236, 64, 122, 0.5);
+            background: linear-gradient(45deg, #d81b60, #ec407a);
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #b56576;
+            margin-top: 30px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="error-box">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="error-logo">
+    <h1 class="error-title">Erreur 503</h1>
+    <p class="error-text">Le backend n'est pas joignable pour le moment.</p>
+    <p class="error-subtext">Il se peut qu'il soit en maintenance ou temporairement indisponible.</p>
+    <a href="/" class="btn btn-custom mt-3">
+        <i class="fas fa-home"></i> Retour à l'accueil
+    </a>
+</div>
+
+<footer>
+    &copy; 2025 TP Docker - Octobre Rose - Tous droits réservés.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

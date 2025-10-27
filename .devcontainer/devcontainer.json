@@ -1,0 +1,13 @@
+{
+    "name": "Debian",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {},
+        "ghcr.io/devcontainers/features/python:1":{},
+        "ghcr.io/devcontainers-extra/features/pipenv:2":{}
+
+    },
+    "remoteUser": "root"
+}
